@@ -155,7 +155,6 @@ var Grids = Class.create(
         Event.observe($(this.id).down('.selector select'), 'change',function(e) {
             Event.stop(e);
             if (!$(this.id).down('div.status').visible()) {
-                console.log($F(Event.element(e)));
                 this._getData(parseInt($F(Event.element(e))),false);
             }
         }.bindAsEventListener(this));
@@ -179,7 +178,6 @@ var Grids = Class.create(
         var range = $R(this.page*this.options.get('recs_per_page'),(this.page+1)*this.options.get('recs_per_page')-1);
 
         var posted_recs = 0;
-        console.log(posted_recs,range,this.page);
         
         //insert all the data based on the page
         this.data.each(function(r) {
