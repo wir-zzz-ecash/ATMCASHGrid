@@ -23,8 +23,9 @@
 .grid.default ul ul li { padding: 2px; border-bottom: 1px solid blue; height: 13px; font-size: 13px; }
 .grid.default ul ul.header {font-weight: bold;}
 .grid.default .footer { background-color: yellow;padding: 2px; text-align: right;font-size: 13px; }
-.grid.default .footer div {position:absolute; right: 80px; top: 5px;}
+.grid.default .footer .stats {position:absolute; right: 80px; top: 5px;}
 .grid.default .footer .status {width: 16px; height: 16px; background:url('images/ajax-loader.gif'); position: absolute; left: 5px; top: 3px}
+.grid.default .footer .selector {float:left;}
 /*buttons*/
 .grid.default .next {height:16px;width:16px;background:url('images/resultset_next.png');cursor:pointer}
 .grid.default .prev {height:16px;width:16px;background:url('images/resultset_previous.png');cursor:pointer}
