@@ -1,0 +1,36 @@
+/* 
+    Document   : grid-css
+    Created on : Dec 7, 2009, 9:30:22 AM
+    Author     : Ran Grushkowsky <rang at atmcash.com>
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+.grid { position:relative; display:inline-block; }
+.grid ul { list-style: none;margin: 0px;padding: 0px; }
+.grid ul ul li { float: left; overflow: hidden; }
+.grid .footer { clear:both; position:relative; }
+
+/*themes*/
+.grid.default { border: 1px solid #000; }
+.grid.default ul ul {margin: 3px;}
+.grid.default ul ul li { padding: 2px; border-bottom: 1px solid blue; height: 13px; font-size: 13px; }
+.grid.default ul ul.header {font-weight: bold;}
+.grid.default .footer { background-color: yellow;padding: 2px; text-align: right;font-size: 13px; }
+.grid.default .footer div {position:absolute; right: 80px; top: 5px;}
+.grid.default .footer .status {width: 16px; height: 16px; background:url('images/ajax-loader.gif'); position: absolute; left: 5px; top: 3px}
+/*buttons*/
+.grid.default .next {height:16px;width:16px;background:url('images/resultset_next.png');cursor:pointer}
+.grid.default .prev {height:16px;width:16px;background:url('images/resultset_previous.png');cursor:pointer}
+.grid.default .last {height:16px;width:16px;background:url('images/resultset_last.png');cursor:pointer}
+.grid.default .first {height:16px;width:16px;background:url('images/resultset_first.png');cursor:pointer}
+.grid.default .next.gray {background:url('images/resultset_next_gray.png');cursor:default}
+.grid.default .prev.gray {background:url('images/resultset_previous_gray.png');cursor:default}
+.grid.default .last.gray {background:url('images/resultset_last_gray.png');cursor:default}
+.grid.default .first.gray {background:url('images/resultset_first_gray.png');cursor:default}
