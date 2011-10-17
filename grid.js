@@ -152,12 +152,14 @@ var Grids = Class.create(
         $(this.id).insert({
             bottom:'<div class="footer"><div class="status" style="display:none"></div>'+(this.options.get('page_selector')?'<div class="selector"><select></select></div>':'')+'<div class="stats"></div> <img src="images/blank.gif" alt="First" class="first" onclick="Grids.getObject(\''+(this.id)+'\').first();return false;" /><img src="images/blank.gif" alt="Previous" class="prev" onclick="Grids.getObject(\''+(this.id)+'\').prev();return false;" /> <img src="images/blank.gif" alt="Next" class="next" onclick="Grids.getObject(\''+(this.id)+'\').next();return false;" /><img src="images/blank.gif" alt="Last" class="last" onclick="Grids.getObject(\''+(this.id)+'\').last();return false;" /></div>'
         });
-        Event.observe($(this.id).down('.selector select'), 'change',function(e) {
-            Event.stop(e);
-            if (!$(this.id).down('div.status').visible()) {
-                this._getData(parseInt($F(Event.element(e))),false);
-            }
-        }.bindAsEventListener(this));
+        if(this.options.get('page_selector')){
+            Event.observe($(this.id).down('.selector select'), 'change',function(e) {
+                Event.stop(e);
+                if (!$(this.id).down('div.status').visible()) {
+                    this._getData(parseInt($F(Event.element(e))),false);
+                }
+            }.bindAsEventListener(this));
+        }
     },
     /**
      * Helper Function: Writes the data into the grid.
